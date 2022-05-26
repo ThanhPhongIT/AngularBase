@@ -1,10 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'CST-STUDENTS-ADMIN';
+export class AppComponent implements OnInit {
+
+  constructor(
+    private readonly router: Router,
+  ) {
+
+  }
+
+  ngOnInit() {
+    // let rtokexp = +JSON.parse(localStorage.getItem('rtok_expire')) || null;
+    // if (rtokexp && rtokexp > new Date().getTime()) {
+    //   localStorage.clear();
+    //   this.router.navigate(['/log-in']);
+    // }
+    // this.authService.retrieveTokenOnPageLoad(); // setup authState
+    // this.ciAuthStateService.isAuthorized$.subscribe(() => {
+    // });
+  }
+
 }
